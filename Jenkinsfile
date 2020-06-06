@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Installing Dependencies') {
       steps {
-       sh 'npm install'
+       sh 'npm install --production'
       }
     }
     stage('Building prod') {

@@ -4,6 +4,6 @@ WORKDIR /usr/node/src
 
 COPY ./ ./ 
 
-RUN npm install
+RUN npm install --production && npm cache clean --force
 
 CMD [ "node", "server.js" ]
