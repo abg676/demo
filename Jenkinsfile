@@ -6,17 +6,14 @@ pipeline {
   }
   agent any
   stages {
-    stage('Cloning Git') {
+    stage('Installing Dependencies') {
       steps {
-        git 'https://github.com/abg676/demo.git'
+       sh 'npm install'
       }
     }
-    stage('Installing and Building') {
+    stage('Building prod') {
       steps {
-        script {
-          npm install
-          npm build
-        }
+       sh 'npm build'
       }
     }
     stage('Building image') {
