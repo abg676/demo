@@ -6,11 +6,6 @@ pipeline: {
     }
     agent any
     stages {
-         stage('Cloning Git') {
-         steps {
-                git 'https://github.com/abg676/demo.git'
-            }
-        }
         stage('Enviroment') {
             env.NODE_ENV='production'
             steps {
