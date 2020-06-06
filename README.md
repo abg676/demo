@@ -1,5 +1,3 @@
 # README
 
-Hello Demo Docker App
-
-hi docker
+Full CI/CD with Jenkins and Docker
