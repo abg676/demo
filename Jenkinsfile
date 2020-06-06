@@ -11,11 +11,6 @@ pipeline {
        sh 'npm install --production'
       }
     }
-    stage('Building prod') {
-      steps {
-       sh 'npm build'
-      }
-    }
     stage('Building image') {
       steps{
         script {
