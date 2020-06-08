@@ -4,6 +4,12 @@ WORKDIR /usr/node/src
 
 COPY package*.json ./
 
-RUN npm install --production && npm cache clean --force
+RUN npm cache clean --force
+
+RUN npm ci --only=production
+
+COPY . .
+
+EXPOSE 8000
 
 CMD [ "node", "server.js" ]
